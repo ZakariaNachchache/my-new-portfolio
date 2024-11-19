@@ -56,18 +56,7 @@ export const Home = () => {
                       <div className="ring three"></div>
                     </div>
                   </Link>
-                  {/* <div id="button_h" className="ac_btn btn">
-                    <a
-                      href={resume}
-                      download="ResumeOfficial.pdf"
-                      className="my-3"
-                    >
-                      Resume
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </a> 
-                  </div> */}
+
                   <br />
                   <div id="button_h" className=" ac_btn btn mt-3">
                     <BasicMenu />

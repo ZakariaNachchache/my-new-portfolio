@@ -19,7 +19,7 @@ const introdata = {
 const dataabout = {
   title: "abit about my self",
   aboutme:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    "Full Stack Developer specializing in Java Spring Boot and Python, with a proven track record of developing scalable, secure, and high-performance applications. Skilled in building RESTful APIs, microservices, and responsive frontends using Spring Boot, Django, FastAPI, Node.js, and Express.js. Experienced in cloud deployments, containerization with Docker.",
 };
 const worktimeline = [
   {
@@ -39,7 +39,7 @@ const worktimeline = [
   },
 ];
 
-const skills = [
+const languages = [
   {
     name: "Java",
     value: 90,
@@ -61,22 +61,21 @@ const skills = [
     value: 75,
   },
 ];
-
 const services = [
   {
-    title: "UI & UX Design",
+    title: "Full-Stack Developer",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+      "Design, develop, and maintain web applications using both frontend and backend technologies. Collaborate across teams to deliver scalable and secure solutions.",
   },
   {
-    title: "Mobile Apps",
+    title: "Mobile Developer",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+      "Develop high-performance mobile applications for Android and iOS platforms. Ensure seamless user experiences through responsive design and efficient code.",
   },
   {
-    title: "Wordpress Design",
+    title: "Testing & QA Engineer",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+      "Conduct rigorous testing to ensure software quality. Develop automated test scripts, perform manual testing, and collaborate with developers to resolve bugs.",
   },
 ];
 
@@ -294,7 +293,7 @@ export {
   dataabout,
   dataportfolio,
   worktimeline,
-  skills,
+  languages,
   services,
   introdata,
   contactConfig,

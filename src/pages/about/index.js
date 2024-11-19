@@ -6,9 +6,10 @@ import {
   dataabout,
   meta,
   worktimeline,
-  skills,
+  languages,
   services,
 } from "../../content_option";
+import VirtualizedList from "../../components/List";
 
 export const About = () => {
   return (
@@ -57,10 +58,10 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
+            <h3 className="color_sec py-4">languages</h3>
           </Col>
           <Col lg="7">
-            {skills.map((data, i) => {
+            {languages.map((data, i) => {
               return (
                 <div key={i}>
                   <h3 className="progress-title">{data.name}</h3>
@@ -81,7 +82,7 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
+            <h3 className="color_sec py-4">Main Roles</h3>
           </Col>
           <Col lg="7">
             {services.map((data, i) => {
@@ -92,6 +93,14 @@ export const About = () => {
                 </div>
               );
             })}
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lang="5">
+            <h3 className="color_sec py-4">List</h3>
+          </Col>
+          <Col lg="7" className="mb-14">
+            <VirtualizedList />
           </Col>
         </Row>
       </Container>
