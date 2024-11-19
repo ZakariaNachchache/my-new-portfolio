@@ -4,9 +4,32 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
-import BasicMenu from "../../components/Menu";
+import french from "../../assets/NachchacheZakariaFrancais.pdf";
+import english from "../../assets/NachchacheZakariaEnglish.pdf";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../../components/ResumeDialog";
 
 export const Home = () => {
+  const handleDownload = (resumeType) => {
+    const link = document.createElement("a");
+    link.href = resumeType === "french" ? french : english;
+    link.download =
+      resumeType === "french"
+        ? "NachchacheZakariaFrancais.pdf"
+        : "NachchacheZakariaEnglish.pdf";
+    link.click();
+    setIsDialogOpen(false);
+  };
+
   return (
     <HelmetProvider>
       <section id="home" className="home">
@@ -58,8 +81,38 @@ export const Home = () => {
                   </Link>
 
                   <br />
-                  <div id="button_h" className=" ac_btn btn mt-3">
-                    <BasicMenu />
+                  <div id="button_p" className=" ac_btn btn mt-3">
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <button>Resume</button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>Download Resume</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            Please specify which resume version you are willing
+                            to download.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel
+                            onClick={() => setIsDialogOpen(false)}
+                          >
+                            Cancel
+                          </AlertDialogCancel>
+                          <AlertDialogAction
+                            onClick={() => handleDownload("french")}
+                          >
+                            French
+                          </AlertDialogAction>
+                          <AlertDialogAction
+                            onClick={() => handleDownload("english")}
+                          >
+                            English
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
                   </div>
                 </div>
               </div>

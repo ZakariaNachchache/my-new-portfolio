@@ -158,10 +158,8 @@ const dataportfolio = [
 const contactConfig = {
   YOUR_EMAIL: "zakaria@nachchache.com",
   YOUR_FONE: "(212)641036125",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
-  // creat an emailjs.com account
-  // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
+  description: " ",
+
   YOUR_SERVICE_ID: "service_il4xup5",
   YOUR_TEMPLATE_ID: "template_c862z1h",
   YOUR_USER_ID: "wjX9Ntr0hvzjh40vU",
@@ -171,7 +169,7 @@ const socialprofils = {
   github: "https://github.com/ZakariaNachchache",
   facebook: "https://facebook.com",
   linkedin: "https://www.linkedin.com/in/zakaria-nachchache-a172ab194/",
-  twitter: "https://twitter.com",
+  twitter: "https://x.com",
 };
 
 const projectsData = [

@@ -4,7 +4,7 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
-import resume from "../assets/NachchacheZakariaResume.pdf";
+// import resume from "../assets/NachchacheZakariaResume.pdf";
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
 
@@ -60,20 +60,24 @@ const Headermain = () => {
                     </Link>
                   </li>
                   <li className="menu_item">
-                    <a
+                    <Link onClick={handleToggle} to="/resume" className="my-3">
+                      {" "}
+                      Resume
+                    </Link>
+                    {/* <a
                       href={resume}
                       download="ResumeOfficial.pdf"
                       className="my-3"
                     >
                       {" "}
                       Resume
-                    </a>
+                    </a> */}
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
+          <div className="menu_footer custom-footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
             <div className="d-flex">
               <a href={socialprofils.facebook}>Facebook</a>
               <a href={socialprofils.github}>Github</a>
