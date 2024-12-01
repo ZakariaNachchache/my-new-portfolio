@@ -3,7 +3,7 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import french from "../../assets/NachchacheZakariaFrancais.pdf";
 import english from "../../assets/NachchacheZakariaEnglish.pdf";
 import {
@@ -19,7 +19,10 @@ import {
 } from "../../components/ResumeDialog";
 
 export const Home = () => {
+  const navigate = useNavigate();
+
   const handleDownload = (resumeType) => {
+    console.log("resume/index");
     const link = document.createElement("a");
     link.href = resumeType === "french" ? french : english;
     link.download =
@@ -27,7 +30,8 @@ export const Home = () => {
         ? "NachchacheZakariaFrancais.pdf"
         : "NachchacheZakariaEnglish.pdf";
     link.click();
-    setIsDialogOpen(false);
+
+    navigate("/");
   };
 
   return (
@@ -81,38 +85,48 @@ export const Home = () => {
                   </Link>
 
                   <br />
-                  <div id="button_p" className=" ac_btn btn mt-3">
-                    <AlertDialog>
-                      <AlertDialogTrigger asChild>
-                        <button>Resume</button>
-                      </AlertDialogTrigger>
-                      <AlertDialogContent>
-                        <AlertDialogHeader>
-                          <AlertDialogTitle>Download Resume</AlertDialogTitle>
-                          <AlertDialogDescription>
-                            Please specify which resume version you are willing
-                            to download.
-                          </AlertDialogDescription>
-                        </AlertDialogHeader>
-                        <AlertDialogFooter>
-                          <AlertDialogCancel
-                            onClick={() => setIsDialogOpen(false)}
-                          >
-                            Cancel
-                          </AlertDialogCancel>
-                          <AlertDialogAction
-                            onClick={() => handleDownload("french")}
-                          >
-                            French
-                          </AlertDialogAction>
-                          <AlertDialogAction
-                            onClick={() => handleDownload("english")}
-                          >
-                            English
-                          </AlertDialogAction>
-                        </AlertDialogFooter>
-                      </AlertDialogContent>
-                    </AlertDialog>
+                  <div className="flex flex-row items-center justify-start gap-7 mt-2">
+                    <div id="button_p" className=" ac_btn btn ">
+                      <AlertDialog>
+                        <AlertDialogTrigger asChild>
+                          <button>Resume</button>
+                        </AlertDialogTrigger>
+                        <AlertDialogContent>
+                          <AlertDialogHeader>
+                            <AlertDialogTitle>Download Resume</AlertDialogTitle>
+                            <AlertDialogDescription>
+                              Please specify which resume version you are
+                              willing to download.
+                            </AlertDialogDescription>
+                          </AlertDialogHeader>
+                          <AlertDialogFooter>
+                            <AlertDialogCancel
+                              onClick={() => setIsDialogOpen(false)}
+                            >
+                              Cancel
+                            </AlertDialogCancel>
+                            <AlertDialogAction
+                              onClick={() => handleDownload("french")}
+                            >
+                              French
+                            </AlertDialogAction>
+                            <AlertDialogAction
+                              onClick={() => handleDownload("english")}
+                            >
+                              English
+                            </AlertDialogAction>
+                          </AlertDialogFooter>
+                        </AlertDialogContent>
+                      </AlertDialog>
+                    </div>
+                    <Link to="/skills">
+                      <div id="button_h" className="ac_btn btn">
+                        My Skills
+                        <div className="ring one"></div>
+                        <div className="ring two"></div>
+                        <div className="ring three"></div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>

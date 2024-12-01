@@ -4,7 +4,6 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
-// import resume from "../assets/NachchacheZakariaResume.pdf";
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
 
@@ -64,14 +63,6 @@ const Headermain = () => {
                       {" "}
                       Resume
                     </Link>
-                    {/* <a
-                      href={resume}
-                      download="ResumeOfficial.pdf"
-                      className="my-3"
-                    >
-                      {" "}
-                      Resume
-                    </a> */}
                   </li>
                 </ul>
               </div>

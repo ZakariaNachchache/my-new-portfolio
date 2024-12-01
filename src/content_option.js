@@ -1,3 +1,8 @@
+import image5 from "./assets/skills/pic5.jpg";
+import image2 from "./assets/skills/pic2.jpg";
+import image3 from "./assets/skills/pic3.jpg";
+import image4 from "./assets/skills/pic4.jpg";
+import image6 from "./assets/skills/finalfinal.jpg";
 const logotext = "ZN";
 const meta = {
   title: "Zakaria Nachchache's Portfolio",
@@ -164,7 +169,10 @@ const contactConfig = {
   YOUR_TEMPLATE_ID: "template_c862z1h",
   YOUR_USER_ID: "wjX9Ntr0hvzjh40vU",
 };
-
+const resumes = {
+  french: "https://1drv.ms/b/s!AkvjyCwcNo12dq9jQEaYoLqfHn4?e=8gPfRq",
+  english: "https://1drv.ms/b/s!AkvjyCwcNo12dyduj3o2ghR5iJ8?e=ZlZIKx",
+};
 const socialprofils = {
   github: "https://github.com/ZakariaNachchache",
   facebook: "https://facebook.com",
@@ -285,6 +293,59 @@ const projectsData = [
     ],
   },
 ];
+const skills = [
+  {
+    category: "Frontend Development",
+    list: ["React.js", "Next.js", "HTML", "CSS", "JavaScript", "TailwindCSS"],
+    image: image3,
+  },
+  {
+    category: "Backend Development",
+    list: [
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "FastAPI",
+      "Django",
+      "Flask",
+    ],
+    image: image2,
+  },
+  {
+    category: "Databases",
+    list: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "SQLite", "Oracle"],
+    image: image4,
+  },
+  {
+    category: "Version Control & Deployment",
+    list: [
+      "Docker",
+      "Gitlab",
+      "Git",
+      "NGINX",
+      "Vercel",
+      "Netlify",
+      "Heroku",
+      "Azure",
+      "",
+    ],
+    image: image5,
+  },
+  {
+    category: "Testing & QA",
+    list: [
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "ESLint",
+      "Mocha",
+      "JUnit",
+      "Selenium",
+      "Jenkins",
+    ],
+    image: image6,
+  },
+];
 
 export {
   meta,
@@ -298,4 +359,6 @@ export {
   socialprofils,
   logotext,
   projectsData,
+  resumes,
+  skills,
 };

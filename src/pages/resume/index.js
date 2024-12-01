@@ -3,7 +3,6 @@ import "./style.css";
 import React, { useState, useEffect } from "react";
 import {
   AlertDialog,
-  AlertDialogTrigger,
   AlertDialogContent,
   AlertDialogHeader,
   AlertDialogFooter,
@@ -12,19 +11,20 @@ import {
   AlertDialogAction,
   AlertDialogCancel,
 } from "../../components/ResumeDialog";
-
+import { useNavigate } from "react-router-dom";
 import french from "../../assets/NachchacheZakariaFrancais.pdf";
 import english from "../../assets/NachchacheZakariaEnglish.pdf";
 
 export default function Resume() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     // Open the custom alert dialog
     setIsDialogOpen(true);
   }, []);
 
   const handleDownload = (resumeType) => {
+    console.log("resume/index");
     const link = document.createElement("a");
     link.href = resumeType === "french" ? french : english;
     link.download =
@@ -33,6 +33,7 @@ export default function Resume() {
         : "NachchacheZakariaEnglish.pdf";
     link.click();
     setIsDialogOpen(false);
+    navigate("/");
   };
 
   return (
