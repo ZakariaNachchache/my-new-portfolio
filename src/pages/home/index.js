@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
+import Button from "@mui/joy/Button";
 import { Link, useNavigate } from "react-router-dom";
 import french from "../../assets/NachchacheZakariaFrancais.pdf";
 import english from "../../assets/NachchacheZakariaEnglish.pdf";
+import Snackbar from "@mui/joy/Snackbar";
+import { keyframes } from "@mui/system";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -18,7 +21,32 @@ import {
   AlertDialogTrigger,
 } from "../../components/ResumeDialog";
 
+const inAnimation = keyframes`
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+const outAnimation = keyframes`
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+`;
+
 export const Home = () => {
+  const [open, setOpen] = useState(true);
+  const animationDuration = 600;
+
   const navigate = useNavigate();
 
   const handleDownload = (resumeType) => {
@@ -134,6 +162,40 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      <Snackbar
+        open={open}
+        autoHideDuration={2222}
+        color="neutral"
+        size="lg"
+        variant="outlined"
+        animationDuration={animationDuration}
+        onClose={() => setOpen(false)}
+        sx={[
+          open && {
+            animation: `${inAnimation} ${animationDuration}ms forwards`,
+          },
+          !open && {
+            animation: `${outAnimation} ${animationDuration}ms forwards`,
+          },
+        ]}
+        endDecorator={
+          <Button
+            onClick={() =>
+              window.open(
+                "https://github.com/ZakariaNachchache/my-new-portfolio",
+                "_blank"
+              )
+            }
+            size="sm"
+            variant="soft"
+            color="black"
+          >
+            Go To repo
+          </Button>
+        }
+      >
+        Fellow Developer? here's the source code for you
+      </Snackbar>
     </HelmetProvider>
   );
 };
