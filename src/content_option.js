@@ -3,6 +3,7 @@ import image2 from "./assets/skills/pic2.jpg";
 import image3 from "./assets/skills/pic3.jpg";
 import image4 from "./assets/skills/pic4.jpg";
 import image6 from "./assets/skills/finalfinal.jpg";
+import image from "./assets/images/1598185390293.jpg";
 const logotext = "ZN";
 const meta = {
   title: "Zakaria Nachchache's Portfolio",
@@ -18,7 +19,7 @@ const introdata = {
   },
   description:
     "Full Stack Developer specializing in Java Spring Boot and Python ecosystems, with proven experience in developing scalable, secure, and high-performance applications. Skilled in creating RESTful APIs, microservices, and responsive frontends using Spring Boot, Next.js, React, Node.js, and Express.js. Experienced in cloud deployments and containerization with Docker.",
-  your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+  your_img_url: image,
 };
 
 const dataabout = {
@@ -81,82 +82,6 @@ const services = [
     title: "Testing & QA Engineer",
     description:
       "Conduct rigorous testing to ensure software quality. Develop automated test scripts, perform manual testing, and collaborate with developers to resolve bugs.",
-  },
-];
-
-const dataportfolio = [
-  {
-    img: require("./assets/images/image.png"),
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/800/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/600/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/300/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/700/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-
-  {
-    img: "https://picsum.photos/400/600/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/300/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/550/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/700/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
   },
 ];
 
@@ -292,6 +217,28 @@ const projectsData = [
       "Deployment & Optimization",
     ],
   },
+
+  {
+    title: "Workflow managment SAAS",
+    description:
+      "Currently enrolled as a Front-end develoeper at Workel in a team of 5 developers, we are building a workflow management SAAS application that allows users to create multiple workspaces to manage their projects. The application features a scalable mailing system, secure user authentication, and authorization, and deployment and optimization capabilities.",
+    image: "image10.jpg",
+    technologies: [
+      "React.js ",
+      "Typescript",
+      "pusher",
+      "PostgreSQL",
+      "Axios",
+      "Laravel",
+      "TailwindCSS",
+    ],
+    keyfeatures: [
+      "Multiple Workspaces holding multiple projects",
+      "Scalable Mailing System",
+      "Secure User Authentication & Authorization",
+      "Deployment & Optimization",
+    ],
+  },
 ];
 const skills = [
   {
@@ -350,7 +297,6 @@ const skills = [
 export {
   meta,
   dataabout,
-  dataportfolio,
   worktimeline,
   languages,
   services,
