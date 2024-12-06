@@ -1,6 +1,8 @@
-# My Professional Portfolio  
+# My Professional Portfolio 
+
 ## About the Portfolio  
-This portfolio serves as a comprehensive showcase of the **diverse projects** I have contributed to throughout my journey as a **Computer Science student**, **intern**, and **professional developer**. It reflects my growth, technical expertise, and passion for creating impactful applications.  
+This portfolio serves as a comprehensive showcase of the **diverse projects** I have contributed to throughout my journey as a **Computer Science student**, **intern**, and **professional developer**. It reflects my growth, technical expertise, and passion for creating impactful applications. if you want to preview the portfolio I deployed it using **Render** with a free domain name  
+**[Preview](https://zakarianachchache-portfolio.onrender.com/)**
 
 ## Why React?  
 To build this portfolio, I chose **React**, my go-to library for developing **dynamic** and **responsive** web applications. React's **versatility** and **extensive ecosystem** make it an ideal choice for showcasing my technical capabilities and creating an engaging user experience.
