@@ -46,7 +46,7 @@ const outAnimation = keyframes`
 export const Home = () => {
   const [open, setOpen] = useState(true);
   const animationDuration = 600;
-
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleDownload = (resumeType) => {
@@ -164,7 +164,7 @@ export const Home = () => {
       </section>
       <Snackbar
         open={open}
-        autoHideDuration={2222}
+        autoHideDuration={4000}
         color="neutral"
         size="lg"
         variant="outlined"

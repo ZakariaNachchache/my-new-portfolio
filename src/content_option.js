@@ -3,7 +3,7 @@ import image2 from "./assets/skills/pic2.jpg";
 import image3 from "./assets/skills/pic3.jpg";
 import image4 from "./assets/skills/pic4.jpg";
 import image6 from "./assets/skills/finalfinal.jpg";
-import image from "./assets/images/1598185390293.jpg";
+import image from "./assets/images/Chill_guy_original_artwork.jpg";
 const logotext = "ZN";
 const meta = {
   title: "Zakaria Nachchache's Portfolio",
@@ -15,7 +15,7 @@ const introdata = {
   animated: {
     first: "I love coding",
     second: "I code cool websites",
-    third: "I develop mobile apps",
+    third: "I'm just a chill guy who I develop mobile apps",
   },
   description:
     "Full Stack Developer specializing in Java Spring Boot and Python ecosystems, with proven experience in developing scalable, secure, and high-performance applications. Skilled in creating RESTful APIs, microservices, and responsive frontends using Spring Boot, Next.js, React, Node.js, and Express.js. Experienced in cloud deployments and containerization with Docker.",

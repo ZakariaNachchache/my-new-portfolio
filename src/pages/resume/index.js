@@ -23,6 +23,11 @@ export default function Resume() {
     setIsDialogOpen(true);
   }, []);
 
+  const handleCancel = () => {
+    setIsDialogOpen(false);
+    navigate("/");
+  };
+
   const handleDownload = (resumeType) => {
     console.log("resume/index");
     const link = document.createElement("a");
@@ -46,7 +51,7 @@ export default function Resume() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel onClick={() => setIsDialogOpen(false)}>
+          <AlertDialogCancel onClick={() => handleCancel()}>
             Cancel
           </AlertDialogCancel>
           <AlertDialogAction onClick={() => handleDownload("french")}>
