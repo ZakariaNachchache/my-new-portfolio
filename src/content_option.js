@@ -86,7 +86,7 @@ const services = [
 ];
 
 const contactConfig = {
-  YOUR_EMAIL: "zakaria.nachchache@gwwwmail.com",
+  YOUR_EMAIL: "zakaria.nachchache@gmail.com",
   YOUR_FONE: "(212)641036125",
   description: " ",
 
